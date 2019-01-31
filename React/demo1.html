@@ -1,0 +1,56 @@
+<html>
+<head>
+<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+</head>
+<body>
+	<div id="root">
+	</div>
+	<script type="text/babel">
+		//ReactDOM.render(React.createElement('div', { id: 'welcome'}, 'Welcome to Demo'), document.getElementById('root'));
+
+		//ReactDOM.render(what, where);
+
+		// var div = React.createElement('div', { id: 'welcome'}, 'Welcome to Demo');
+		// ReactDOM.render(div,document.getElementById('root'));
+
+		//ReactDOM.render(<div>Hellow World Using JSX</div>, document.getElementById('root'));
+
+		var login1 = <div>
+			<input type="text" placeholder="User Name" /><br/>
+			<input type="text" placeholder="Password" /><br/>
+			<br/>
+			<button>Login</button>
+		</div>
+
+
+		var Login2 = function(props) {
+			return <div>
+				<h1>{props.title}</h1>
+				<input type="text" placeholder="User Name" /><br/>
+				<input type="text" placeholder="Password" /><br/>
+				<br/>
+				<button>Login</button>
+			</div>
+		}
+		//ReactDOM.render(<Login2 title="Login Screen" />, document.getElementById('root'));
+
+		
+		class Login extends React.Component {
+			render() {
+				return <div>
+						<h1>{this.props.title}</h1>
+						<input type="text" placeholder="User Name" /><br/>
+						<input type="text" placeholder="Password" /><br/>
+						<br/>
+						<button>{this.props.buttonText}</button>
+					</div>
+			}
+		}
+
+		ReactDOM.render(<Login title="Welcome to Login" buttonText="XYZ" />, document.getElementById('root'));
+	</script>
+</body>
+</html>

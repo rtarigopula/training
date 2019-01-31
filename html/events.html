@@ -1,0 +1,135 @@
+<html>
+	<head>
+	<script src="test.js"></script>
+	</head>
+	<body>
+		<form method="post" action="responsive.html">
+			<div>
+				<lable>Text:</lable> <input type="text" value=""  placeholder="User Name" maxlength="10" id="userName" name="userName" />
+			</div>
+			<div id="coursediv">
+				<lable>Select:</lable> 
+				        <select id="course">
+							<option value="html">HTML</option>
+							<option value="css">CSS</option>
+							<option value="js">JavaScript</option>
+						</select>
+			</div>
+			<div>
+				<lable>Checkbox:</lable> 
+							<input type="checkbox" value="html" id="html" name="uicourse"/>HTML
+							<input type="checkbox" value="css" id="css" name="uicourse" />CSS
+							<input type="checkbox" value="js" id="js" name="uicourse" />JavaScript
+			</div>
+			<div>
+				<lable>Radio:</lable> 
+							<input type="radio" value="rajesh" id="rajesh" name="trainer"/>Rajesh
+							<input type="radio" value="ravi" id="ravi" name="trainer" />Ravi
+							<input type="radio" value="kishore" id="sai" name="trainer" />Sai		
+			</div>
+
+			<div>
+				<lable>Selected Value</lable><span id="selectedVal"></span>
+			</div>
+
+
+			<br/><br/>
+			<input type="SUBMIT" id="formSubmit" value="Submit" />
+		</form>
+
+		<script>
+			var elm = document.getElementById('course');
+
+			var txt = document.getElementById('userName');
+
+			// txt.addEventListener('change', function() {
+			// 	this.value = this.value + 'a';
+			// });
+
+			function msg(e) {
+				//e.target
+
+				e.stopPropagation();
+				alert('This is Click event');
+			}
+
+			function course(e) {
+				alert('This is course div');
+			}
+
+			var coursediv = document.getElementById('coursediv');
+
+			coursediv.addEventListener('click', course);
+			elm.addEventListener('click', msg);
+
+			var submit = document.getElementById('formSubmit');
+			submit.addEventListener('click', function(e) {
+				e.preventDefault();
+			});
+
+			/*
+				click, change, keypress, keyup, mousemove, blur, submit
+			*/
+
+
+			var course = {
+				name : 'html',
+				desc : 'This is html',
+				topics : ['forms', 'form elements'],
+
+				giveMeDesc: function() {
+					return this.desc;
+				} 
+			};
+
+			try {
+				txt.value=course.xyz();
+			}catch(error) {
+				//txt.value = error;
+			}
+
+			function coordinates(pos) {
+				console.log("longitude=" + pos.coords.longitude);
+				console.log("latitude=" + pos.coords.latitude)
+			}
+
+			//navigator.geolocation.getCurrentPosition(coordinates);
+
+
+			console.log("This is my first text");
+
+			
+
+			var i = 100;
+			var x = setInterval(function(){
+				//console.log("This is repeated text " + i++);
+			});
+
+			setTimeout(function(){
+				clearInterval(x)
+			},5000);
+
+			//AJAX
+
+			var xmlReq = new XMLHttpRequest();
+			xmlReq.open('GET','https://m.att.com/services/shopwireless/model/att/ecom/api/BuyFlowController/service?actionType=checkwireline&skuid=null', true);
+			xmlReq.send();
+
+			xmlReq.onreadystatechange = function() {
+				//readySate: gives you state of your request, 0,1,2,3,4
+				//satus: gives you status of your request
+
+				console.log("Ready State=" + this.readyState + "Status=" + this.status);
+				if (this.readyState == 4 && this.status == 200) {
+					console.log("Response Text = ", this.responseText);
+				}
+			}
+
+		
+			
+			console.log("This is my last text");
+
+			
+	</script>
+	</body>
+</html>

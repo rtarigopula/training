@@ -1,0 +1,48 @@
+Session - 1
+---------------
+declarations
+functions
+String functions
+Array functions
+Controle Structures
+operators
+
+Session - 2
+------------
+Event bindings
+Event Bubbling
+Event stopping
+
+Session - 3
+-----------
+Numbers, parsing
+RegExp
+this keyword
+Errors
+strict mode
+JSON
+Objects
+
+
+Session - 4
+-------
+AJAX
+Cookies
+Navigator
+Location
+
+Session - 5
+-----------
+Prototype
+
+ES6 (EcmaScript6)
+
+Array.map()
+Array.filter()
+Arrow functions
+getters and setters
+promises
+fetch
+assignments
+classes
+

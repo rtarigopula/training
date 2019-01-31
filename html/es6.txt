@@ -1,0 +1,152 @@
+Prototype
+
+ES6 (EcmaScript6)
+
+Array.map()
+Array.filter()
+
+Arrow functions
+getters and setters
+
+
+promises
+fetch
+assignments
+classes
+
+
+
+Task 1 -> 2 min
+Promise = Task 2 -> 60 min;
+Task 3 -> 3 min;
+Task 4 -> 2 min;
+if(primise done (Task 5 depending on Task 2 -> 10;)
+
+Total time = 77 min;
+
+	T1
+	T2 T3
+	T2 T4
+	T2
+	T5
+var t2Promise = new Promise(function(resolve, errored) {
+	try {
+		T2();
+		resolve();
+	} catch (error) {
+		errored(error);
+	}
+});
+T3();T4();
+t2Promise.then(function(){
+	T5();
+}).catch() {
+	
+};
+
+
+
+function deposit() {
+	return new Promise(function(resolve, errored) {
+		try {
+			//all logic here
+			resolve();
+		} catch (error) {
+			errored(error);
+		}
+	});
+	
+};
+
+
+var bank {
+	
+	fetch: function(url, data) {
+		return new Promise(function(resolve, errored) {
+			try {
+				//all logic here
+				resolve();
+			} catch (error) {
+				errored(error);
+			}
+		});
+	},
+
+	runDeposites: fuction() {
+		var dep = this.deposite();
+
+		dep.then(function(response) {
+
+		}).error(function() {
+
+		});
+
+	}
+}
+
+
+var test = new Promise(function(resolve, errored) {
+ 	console.log(" Inside promise");
+ 	resolve("Rajesh");
+ }).then(function(res) {
+ 	 console.log('promise completed successfully ' + res);
+});
+
+new Promise(function(resolve, errored) {
+	try {
+		abc.call();	
+	} catch(error) {
+		errored(error);
+	}
+ 	console.log(" Inside promise");
+ 	resolve("Rajesh");
+ }).then(function(res) {
+ 	 console.log('promise completed successfully ' + res);
+}).catch(function(error) {
+	console.log(error);
+});
+
+fetch('https://m.att.com/services/shopwireless/model/att/ecom/api/BuyFlowController/service?actionType=checkwireline&skuid=null',{}).then(function(response){
+	console.log(response);
+}).catch(function(error){
+	console.log(error);
+});
+
+
+
+
+function Course (name, description) {
+	this.name = name;
+	this.desc = description;
+}
+
+var html = new Course('html', 'This is html');
+var css = new Course('css', 'This is css');
+
+Class Course extend xyz{
+	constructor(name, desc) {
+		super(name,desc);
+		this.name = name;
+		this.desc = desc;
+	}
+
+	get n () {
+		return this.name;
+	}
+	set n (name) {
+		this .name = name;
+	}
+}
+
+var html = new Class('html', '');
+
+
+
+
+
+
+
+
+
+
+
