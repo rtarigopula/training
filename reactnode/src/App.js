@@ -1,23 +1,17 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Login from './login';
+import DataTable from './data-table';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <Login />
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          {/* <Lifecycle header="Welcom to React">
+            This is to Demo props children.
+          </Lifecycle> */}
+          <DataTable />
         </header>
       </div>
     );

@@ -1,0 +1,29 @@
+{
+    "students": [
+        {
+            "firstName": "Rajesh",
+            "lastName": "Tarigopula",
+            "qualification" : "MCA"
+        },
+        {
+            "firstName": "Sachin",
+            "lastName": "Tarigopula",
+            "qualification" : "BTech"
+        },
+        {
+            "firstName": "Sai",
+            "lastName": "Krishna",
+            "qualification" : "BSC"
+        },
+        {
+            "firstName": "Kishore",
+            "lastName": "Tarigopula",
+            "qualification" : "MCA"
+        },
+        {
+            "firstName": "Kiran",
+            "lastName": "Bandla",
+            "qualification" : "BTech"
+        }
+    ]
+}
