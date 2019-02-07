@@ -9,7 +9,7 @@
 
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, TextInput, View, ScrollView, Button} from 'react-native';
-import { blue, white } from 'ansi-colors';
+import {createAppContainer, createStackNavigator} from 'react-navigation';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -18,7 +18,7 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu',
 });
 
-export default class App extends Component {
+class App extends Component {
   render() {
     return (
   
@@ -36,6 +36,63 @@ export default class App extends Component {
     );
   }
 }
+
+class LoginScreen extends Component {
+  static navigationOptions = {
+    title: 'Login',
+    headerStyle: {
+      backgroundColor: 'blue'
+    },
+    headerTitleStyle: {color: '#FFFFFF'}
+  }
+  render() {
+    return (
+  
+        <View style={styles.container}>
+          <Text style={styles.welcome}>Hello Welcome to React Native!</Text>
+
+          <View style={styles.formview}>
+            <Text>User Name</Text>
+            <TextInput placeholder="User Name" style={styles.inputcontrole} />
+            <Text>Password</Text>
+            <TextInput placeholder="Password" secureTextEntry={true} style={styles.inputcontrole} />
+          </View>
+          <Button title="Login" color="#CCCCCC" style={styles.button} onPress={
+            () => this.props.navigation.navigate('Dashboard')
+          } />
+        </View>
+    );
+  }
+}
+
+class DashBoradScreen extends Component {
+  render() {
+    return (
+  
+        <View style={styles.container}>
+          <Text style={styles.welcome}>Hello Welcome to React Dashbaord!</Text>
+        </View>
+    );
+  }
+}
+
+const navigator = new createStackNavigator({
+  Login: {screen: LoginScreen},
+  Dashboard: {screen: DashBoradScreen}
+}, {
+  initialRouteName: "Login",
+  defaultNavigationOptions: {
+    headerStyle: {
+      backgroundColor: 'blue'
+    }
+  }
+}
+);
+
+export default createAppContainer(navigator);
+
+
+
 
 const styles = StyleSheet.create({
   container: {
