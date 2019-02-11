@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import DataTable from './data-table';
 import {Route, Switch} from 'react-router-dom';
+import MyTable from './table.js';
 
 class App extends Component {
   render() {
@@ -12,7 +13,7 @@ class App extends Component {
           {/* <Lifecycle header="Welcom to React">
             This is to Demo props children.
           </Lifecycle> */}
-          <DataTable />
+          <MyTable />
         </header>
       </div>
     );
@@ -55,4 +56,4 @@ var D8 = () => <Page desitantion="D8" />;
 var D9 = () => <Page desitantion="D9" />
 
 //export default App;
-export default Routing;
+export default App;
